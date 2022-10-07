@@ -77,7 +77,7 @@ function trim(str) {
     return newStr;
 }
 
-console.log(trim(str1))
+// console.log(trim(str1))
 
 
 // ------------------problem  #3 ------------------
@@ -102,8 +102,8 @@ const strA3 = "no";
 const strB3 = "noo";
 const expected3 = false;
 
-const strA4 = "silent";
-const strB4 = "listbn";
+const strA4 = "sss";
+const strB4 = "ssa";
 const expected4 = false;
 
 function check(str1, str2) {
@@ -119,6 +119,7 @@ function check(str1, str2) {
         checker.push(strA[i])
         for (j = 0; j < strB.length; j++) {
             if (strB[j] == strA[i]) {
+                strB = strB.replace(strB[j], ' ');
                 checker.pop(strA[i])
             }
         }
