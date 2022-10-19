@@ -28,14 +28,17 @@ const expected6 = 21;
 const results = {}
 
 function fib(n) {
-    if (n <= 1) return n
-
-    if (n in results) {
+    if (n <= 1){
+        results[n] = n 
+        return n
+    }
+    if (n in results){
         return results[n]
-    }
-    else {
-        results[n] = fib(n - 2) + fib(n - 1)
-    }
+    } 
+    results[n] = fib(n - 2) + fib(n - 1)
     return results[n]
-
 }
+
+fib(8);
+
+console.log(results);
