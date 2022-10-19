@@ -24,14 +24,18 @@ const expected5 = 3;
 const num6 = 8;
 const expected6 = 21;
 
-function findFibo(num){
-    if(num <= 1) return num
-    return findFibo(num - 1) + findFibo(num - 2)
-}
 
-console.log(findFibo(num1))
-console.log(findFibo(num2))
-console.log(findFibo(num3))
-console.log(findFibo(num4))
-console.log(findFibo(num5))
-console.log(findFibo(num6))
+const results = {}
+
+function fib(n) {
+    if (n <= 1) return n
+
+    if (n in results) {
+        return results[n]
+    }
+    else {
+        results[n] = fib(n - 2) + fib(n - 1)
+    }
+    return results[n]
+
+}
