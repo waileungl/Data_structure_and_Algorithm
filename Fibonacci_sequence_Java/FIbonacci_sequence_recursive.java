@@ -8,7 +8,7 @@ public class FIbonacci_sequence_recursive {
         return fib(n - 1) + fib(n - 2);
     }
 
-    public static int fib2(int n, int k, int f0, int f1) {
+public static int fib2(int n, int k, int f0, int f1) {
         if (n == (k+1)) {
             return f1;
         }
