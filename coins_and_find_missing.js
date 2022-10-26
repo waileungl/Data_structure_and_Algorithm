@@ -77,18 +77,18 @@ const expected7 = -1;
 const nums4 = [5, 2, 7, 8, 4, 9, 3];
 const expected8 = 6;
 
-function find_missing(arr){
-    max = Math.max(...arr)
-    min = Math.min(...arr)
-    if ((max - min) != arr.length){
+function find_missing(nums){
+    max = Math.max(...nums)
+    min = Math.min(...nums)
+    if ((max - min) != nums.length){
         return null
     }
-    sum_expected = (max + min) * (arr.length + 1) / 2 
-    sum_arr = 0
-    for (let i = 0; i < arr.length; i++){
-        sum_arr += arr[i]
+    sum_expected = (max + min) * (nums.length + 1) / 2 
+    sum_nums = 0
+    for (let i = 0; i < nums.length; i++){
+        sum_nums += nums[i]
     }
-    return sum_expected - sum_arr
+    return sum_expected - sum_nums
 }
 
 

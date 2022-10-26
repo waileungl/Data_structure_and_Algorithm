@@ -12,7 +12,9 @@ arr = [99, 88, 2, 3 ,0]
 function insertionSort(arr) {
     len = arr.length
     for(var i = 1; i < len; i++){
+        // store arr[i] into a variable
         curr = arr[i]
+        // the number 1 before arr[i]
         j = i - 1;
         while(j >= 0 && arr[j] > curr){
             arr[j+1] = arr[j]
