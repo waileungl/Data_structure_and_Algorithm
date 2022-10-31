@@ -18,7 +18,7 @@ function brute(arr1, arr2){
     }
     return newArr
 }
-// console.log(brute(arr1, arr2));
+console.log(brute(arr1, arr2));
 
 // Hash map
 function hash(arr1, arr2){
@@ -37,3 +37,6 @@ function hash(arr1, arr2){
 }
 
 console.log(hash(arr1, arr2));
+
+// one line brute force
+console.log(Array.from(new Set([...arr1].filter((a) => arr2.includes(a)))));
