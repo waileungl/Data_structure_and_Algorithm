@@ -30,6 +30,9 @@ const expected4 = 4;
 
 
 
+
+
+
 function binary_search(arr, searchNum){
     left = 0
     right = arr.length - 1
