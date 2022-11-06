@@ -9,7 +9,7 @@
 //     first complete it without the bonus, because they ask for additions
 //     after the initial algo is complete
 //     return how many times the given number occurs
-// /
+// //
 
 const nums1 = [1, 3, 5, 6];
 const searchNum1 = 4;
