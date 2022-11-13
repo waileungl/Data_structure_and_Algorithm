@@ -1,4 +1,4 @@
-// find consecutive sum of an array
+// find consecutive sum of an array 
 arr = [1, 3, 5, 7, 0, 8, 0]
 target = 8
 expected = [[3, 5], [0, 8], [0, 8, 0], [8], [8, 0]]
