@@ -1,4 +1,4 @@
-// 
+// //
 function findObjectsFilter(search, items) {
     const searchKeys = Object.keys(search);
 
