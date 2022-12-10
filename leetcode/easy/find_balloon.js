@@ -1,5 +1,5 @@
 text = "ballon"
-// // //
+// // ////
 var maxNumberOfBalloons = function(text) {
     word = "balloon";
     tMap = {};
