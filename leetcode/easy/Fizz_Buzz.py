@@ -39,7 +39,7 @@ def fizzBuzz(n):
 
 print(fizzBuzz(15))
 
-#Hash map approch
+#Hash map approch#
 def fizzBuzz(n):
     arr = []
     hash = {3: "Fizz", 5: "Buzz"}
