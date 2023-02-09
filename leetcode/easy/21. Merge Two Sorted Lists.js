@@ -24,7 +24,7 @@
 // The number of nodes in both lists is in the range [0, 50].
 // -100 <= Node.val <= 100
 // Both list1 and list2 are sorted in non-decreasing order.
-
+// 
 // unsolved
 
 list1 = [1,2,4,4,6]
