@@ -26,7 +26,8 @@
 // Both list1 and list2 are sorted in non-decreasing order.
 // 
 // unsolved
-
+// 
+// 
 list1 = [1,2,4,4,6]
 list2 = [1,3,4]
 
