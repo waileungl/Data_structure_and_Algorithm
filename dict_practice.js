@@ -17,7 +17,7 @@ return the number of times each string occurs (a frequency / hash table)
 //     c: 3,
 //     B: 1,
 //     d: 1,
-// };
+// };//
 
 // const arr3 = [];
 // const expected3 = {}
