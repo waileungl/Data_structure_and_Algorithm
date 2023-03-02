@@ -9,7 +9,7 @@ return the number of times each string occurs (a frequency / hash table)
 // const expected1 = {
 //     a: 3,
 // };
-
+//
 // const arr2 = ["a", "b", "a", "c", "B", "c", "c", "d"];
 // const expected2 = {
 //     a: 2,
