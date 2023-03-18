@@ -26,7 +26,7 @@ var maxProfit = function (prices) {
     let n = prices.length;
     let maxProfit1 = 0, maxProfit2 = 0;
     let minPrice1 = prices[0], minPrice2 = prices[0];
-    
+    //
     for (let i = 0; i < n; i++) {
         // compute the maximum profit for one transaction up to day i
         maxProfit1 = Math.max(maxProfit1, prices[i] - minPrice1);
