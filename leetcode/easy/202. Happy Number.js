@@ -22,31 +22,21 @@
 // Output: false
 
 
-
-function happyNum(n) {
-    if(isNaN(n)){
-        return false
-    }
-    try{
-        if(n >= Math.pow(2, 31) - 1){
-            return false
-        }
-        n = n.toString()
+var isHappy = function (n) {
+    let seen = new Set();
+    while (!(seen.has(n))) {
+        seen.add(n)
+        console.log(seen)
         let sum = 0;
-        for(let i = 0; i < n.length; i++){
-            sum += (n[i] * n[i]);
-            if(i == n.length - 1){
-                if(sum == 1){
-                    return true
-                }
-            }
+        str = n.toString()
+        for(let i in str){
+            sum += Math.pow(str[i], 2)
         }
-        return happyNum(sum)
+        n = sum
+        if(n === 1) return true
     }
-    catch{
-        return false
-    }
-}
+    return false
+};
 
-n = 19
-console.log(happyNum(n))
+
+console.log(isHappy(2))
