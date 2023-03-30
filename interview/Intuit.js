@@ -42,4 +42,4 @@ function getFactors(num) {
     return arr
 }
 
-console.log(arrChecker2([11, 2, 12, 9], [10, 4, 7, 5], [5, 3, 6, 11]))
+console.log(arrChecker2([11, 2, 27, 9], [10, 4, 7, 5], [5, 3, 6, 11]))
