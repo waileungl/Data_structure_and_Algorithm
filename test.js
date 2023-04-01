@@ -1,13 +1,16 @@
-/* Coding Questions
-{1,2,13,8} max = 13, min = 1, diff = 12
-{10,4,7,5} max = 10, min = 4, diff = 6
-{5,3,7,11} max = 11, min = 3, diff = 8
-sum of all the differences of max and min on each row = 26 */
+function sum(num1) {
+    function sum1(num2, currSum = res) {
+        return sum(num1 + num2)
+    }
 
-function arrChecker(...arr){
-    return arr.reduce((acc, curr) => {
-        return acc + (Math.max(...curr) - Math.min(...curr)) 
-    }, 0)
+    sum1.toString = () => num1
+    return res
 }
 
-console.log(arrChecker([1,2,13,8],[10,4,7,5],[5,3,7,11]))
+
+// const sum1 = sum(1)
+// console.log(sum1(2)) // true == 3
+// console.log(sum1(3)) // true == 4
+console.log(sum(1)(2)(3)) // true == 6
+// console.log(sum(5)(-1)(2))  // true == 6)
+
