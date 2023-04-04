@@ -1,20 +1,18 @@
-var countAndSay = function (n) {
-    let base = "1"
-    while (n > 1) {
-        let say = ""
-        let count = 1
-        for (let i =0; i < base.length; i++) {
-            if (base[i] == base[i + 1]) {
-                count++
-            } else {
-                say += (count + base[i])
-                count = 1
-            }
+var coinChange = function (coins, amount) {
+    if(amount === 0) return 0
+    if (coins.length === 1) {
+        if (amount % coins[0] === 0) {
+            return amount/coins[0]
+        }  else {
+            return -1
         }
-        base = say
-        n--;
     }
-    return base
-};
 
-console.log(countAndSay(4))
+    let max = Math.max(...coins)
+    if (coins.includes(amount % max)) {
+        return Math.floor(amount / max) + 1
+    }else{
+        coins.pop()
+        coinChange(coins, amount)
+    }
+};
