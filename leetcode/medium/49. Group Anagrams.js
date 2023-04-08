@@ -33,7 +33,6 @@ const isAnagram = (s, t) => {
         }
     }
 
-    console.log(map)
     for (let j of t) {
         if (!map[j]) {
             return false

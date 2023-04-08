@@ -1,1 +1,3 @@
-console.log(`${(item => [...item, 9])([7, 8])}heyyy`)
+let t = "ABC"
+
+console.log("BAN".includes(...t.split("")))
