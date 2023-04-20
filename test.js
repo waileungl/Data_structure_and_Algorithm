@@ -1,6 +1,6 @@
 const socks = [1, 2, 2, 1, 1, 3, 5, 1, 4, 4]
 
-//
+//////
 const sockPair = socks => {
     let map = new Object()
     for(const sock of socks){
