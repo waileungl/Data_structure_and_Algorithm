@@ -1,12 +1,24 @@
-const socks = [1, 2, 2, 1, 1, 3, 5, 1, 4, 4]
-
-/////
-const sockPair = socks => {
-    let map = new Object()
-    for(const sock of socks){
-        map[sock]? map[sock] ++ : map[sock] = 1
+function firstNonRepeatingLetter(s) {
+    const count = {};
+    for (let char of s) {
+        let lowerCaseChar = char.toLowerCase();
+        if (count[lowerCaseChar] !== undefined) {
+            count[lowerCaseChar]++;
+        } else {
+            count[lowerCaseChar] = 1;
+        }
     }
-    return Object.entries(map).filter((item)=> item[1]%2 === 0).reduce((acc, curr) => (acc + curr[1]), 0)/2
+
+    for (let char of s) {
+        if (count[char.toLowerCase()] === 1) {
+            return char;
+        }
+    }
+
+    return '';
 }
 
-console.log(sockPair(socks)) 
+
+console.log(firstNonRepeatingLetter("a"))
+console.log(firstNonRepeatingLetter("stttttttrbss"))
+console.log(firstNonRepeatingLetter("moonmeeeeen"))
