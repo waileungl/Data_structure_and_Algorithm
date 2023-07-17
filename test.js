@@ -8,7 +8,7 @@ function firstNonRepeatingLetter(s) {
             count[lowerCaseChar] = 1;
         }
     }
-
+//
     for (let char of s) {
         if (count[char.toLowerCase()] === 1) {
             return char;
