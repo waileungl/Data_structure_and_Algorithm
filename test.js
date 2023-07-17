@@ -20,5 +20,5 @@ function firstNonRepeatingLetter(s) {
 
 
 console.log(firstNonRepeatingLetter("a"))
-console.log(firstNonRepeatingLetter("stttttttrbss"))
+console.log(firstNonRepeatingLetter("stttttnhttrbss"))
 console.log(firstNonRepeatingLetter("moonmeeeeen"))
