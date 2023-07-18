@@ -27,15 +27,35 @@ def gate_nor(input1, input2):
 def gate_not(input1):
   '''a NOT gate (-input1)'''
   return bool(not input1)
-//
-def circuit(A, B, C):
-    return gate_and(A, gate_not(gate_and(B, C)))
 
-print(circuit(0, 0, 0))
-print(circuit(0, 0, 1))
-print(circuit(0, 1, 0))
-print(circuit(0, 1, 1))
-print(circuit(1, 0, 0))
-print(circuit(1, 0, 1))
-print(circuit(1, 1, 0))
-print(circuit(1, 1, 1))
+def myCircuit(a, b, c, d):
+    # Apply NOT to each input
+    not_a = gate_not(a)
+    not_b = gate_not(b)
+    not_c = gate_not(c)
+    not_d = gate_not(d)
+
+    # AND of all inputs except one with NOT of that input
+    and1 = gate_and(not_a, gate_and(b, gate_and(c, d)))
+    and2 = gate_and(a, gate_and(not_b, gate_and(c, d)))
+    and3 = gate_and(a, gate_and(b, gate_and(not_c, d)))
+    and4 = gate_and(a, gate_and(b, gate_and(c, not_d)))
+
+    # OR of all the AND outputs
+    or1 = gate_or(and1, and2)
+    or2 = gate_or(and3, and4)
+
+    return gate_or(or1, or2)
+
+print(circuit(1, 1, 1, 0))
+print(circuit(1, 1, 0, 1))
+print(circuit(1, 0, 1, 1))
+print(circuit(0, 1, 1, 1))
+print(circuit(1, 1, 1, 1))
+print(circuit(1, 1, 0, 0))
+print(circuit(1, 0, 0, 0))
+print(circuit(0, 0, 0, 0))
+print(circuit(0, 0, 0, 1))
+print(circuit(0, 0, 1, 0))
+print(circuit(0, 1, 0, 0))
+print(circuit(0, 1, 1, 0))
