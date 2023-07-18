@@ -18,7 +18,7 @@ function firstNonRepeatingLetter(s) {
     return '';
 }
 
-
+//
 console.log(firstNonRepeatingLetter("a"))
 console.log(firstNonRepeatingLetter("stttttnhttrbss"))
 console.log(firstNonRepeatingLetter("moonmeeeeen"))
